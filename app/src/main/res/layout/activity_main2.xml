@@ -159,7 +159,7 @@
         android:layout_marginBottom="92dp"
         android:alpha="0.75"
         android:background="#050505"
-        android:text="@string/create"
+        android:text="Register"
         android:textColor="#F1E8E8"
         android:textColorHighlight="#201C1C"
         android:textColorHint="#FFFFFF"
