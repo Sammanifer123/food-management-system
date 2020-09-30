@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -21,9 +22,9 @@ import java.util.regex.Pattern;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    EditText name, email, address, phone, username, password;
+    EditText name, email, address, phone, username, password, log;
     DatabaseReference reff;
-    Button log, reg;
+    Button reg;
     private Member member;
 
     @Override
@@ -36,7 +37,6 @@ public class MainActivity2 extends AppCompatActivity {
         phone = (EditText) findViewById(R.id.Phone);
         username = (EditText) findViewById(R.id.Username);
         password = (EditText) findViewById(R.id.Password);
-        log = (Button) findViewById(R.id.button4);
         reg = (Button) findViewById(R.id.change);
         member = new Member();
 
@@ -44,7 +44,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         CheckingExistingUserName();
 
-
+        TextView log = (TextView) findViewById(R.id.Login);
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,6 +89,8 @@ public class MainActivity2 extends AppCompatActivity {
                         member.setPassword(password.getText().toString().trim());
                         reff.child(username.getText().toString()).setValue(member);
                         Toast.makeText(getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(i);
                     }
                 } catch (NumberFormatException e) {
 

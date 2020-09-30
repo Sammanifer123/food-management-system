@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -15,8 +16,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-    EditText pw, unam;
-    Button sign ,reg;
+    EditText pw, unam, reg;
+    Button sign;
     DatabaseReference reff;
 
     @Override
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void register() {
-        Button reg = (Button) findViewById(R.id.Register);
+        TextView reg = (TextView) findViewById(R.id.Register);
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         unam =(EditText)findViewById(R.id.Username);
         pw=(EditText)findViewById(R.id.Password);
         sign=(Button)findViewById(R.id.login);
-        reg=(Button)findViewById(R.id.Register);
         sign.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
