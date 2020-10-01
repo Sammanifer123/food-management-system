@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +25,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Edit_CustomerProfile extends AppCompatActivity {
     TextView Editusername,Editname,Editemail,Editaddress,Editphone;
-    Button resetpassword,save,deleteAccount;
+    Button resetpassword,save, deleteAccount;
+    ImageView back;
     ImageButton usernamepencil,namepencil,emailpencil,addresspencil,phonepencil;
     DatabaseReference reff;
     @Override
@@ -42,15 +44,15 @@ public class Edit_CustomerProfile extends AppCompatActivity {
         emailpencil = (ImageButton) findViewById(R.id.imageButton3);
         addresspencil = (ImageButton) findViewById(R.id.imageButton4);
         phonepencil = (ImageButton) findViewById(R.id.imageButton5);
-         save=(Button)findViewById(R.id.button5);
-         resetpassword=(Button)findViewById(R.id.button6);
+        back = (ImageView) findViewById(R.id.back);
+        resetpassword = (Button) findViewById(R.id.button6);
          deleteAccount=(Button)findViewById(R.id.button7);
 
 
         Intent li = getIntent();
         final String username = li.getStringExtra("username");
         resetpasswordButton();
-        saveButton();
+        back();
         viewCustomerDetails();
         editUsername();
         editname();
@@ -65,26 +67,7 @@ public class Edit_CustomerProfile extends AppCompatActivity {
         deleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                final DatabaseReference[] databaseReference = {FirebaseDatabase.getInstance().getReference().child("Member")};
-//                databaseReference[0].addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                        if (dataSnapshot.hasChild("username")){
-//                            databaseReference[0] =FirebaseDatabase.getInstance().getReference().child("Member").child("username");
-//                            databaseReference[0].removeValue();
-//                            Toast.makeText(getApplicationContext(),"Deleted successfully",Toast.LENGTH_SHORT).show();
-//
-//                        }
-//                        else {
-//                            Toast.makeText(getApplicationContext(),"No Source to Delete",Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
+
                 Intent i=getIntent();
                 String username=i.getStringExtra("username");
                 reff = FirebaseDatabase.getInstance().getReference("Member").child(username);
@@ -100,9 +83,9 @@ public class Edit_CustomerProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent go  =getIntent();
-                String username=go.getStringExtra("username");
-                Intent goagain = new Intent(getApplicationContext(),Reset_Password.class);
-                goagain.putExtra("username",username);
+                String username = go.getStringExtra("username");
+                Intent goagain = new Intent(getApplicationContext(), Reset_Password.class);
+                goagain.putExtra("username", username);
                 startActivity(goagain);
                 finish();
 
@@ -110,14 +93,14 @@ public class Edit_CustomerProfile extends AppCompatActivity {
         });
     }
 
-    private void saveButton() {
-        save.setOnClickListener(new View.OnClickListener() {
+    private void back() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent go  =getIntent();
-                String username=go.getStringExtra("username");
-                Intent goagain = new Intent(getApplicationContext(),CustomerProfile.class);
-                goagain.putExtra("username",username);
+                Intent go = getIntent();
+                String username = go.getStringExtra("username");
+                Intent goagain = new Intent(getApplicationContext(), CustomerProfile.class);
+                goagain.putExtra("username", username);
                 startActivity(goagain);
                 finish();
             }

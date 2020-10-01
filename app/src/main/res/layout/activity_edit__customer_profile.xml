@@ -6,49 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".Edit_CustomerProfile">
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="424dp"
-        android:layout_height="740dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/food"
-        android:contentDescription="@string/todo" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="430dp"
-        android:layout_height="738dp"
+        android:id="@+id/imageView2"
+        android:layout_width="474dp"
+        android:layout_height="733dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285"
-        app:srcCompat="@android:drawable/screen_background_dark_transparent"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/bdjbdjhfhjd" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="57dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="373dp"
         android:layout_height="55dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="76dp"
         android:gravity="center"
         android:text="@string/edit_customer_profile"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/edusername"
         android:layout_width="249dp"
         android:layout_height="43dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="180dp"
+        android:textColor="#070707"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +62,8 @@
         android:id="@+id/edphone"
         android:layout_width="254dp"
         android:layout_height="41dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="468dp"
+        android:textColor="#070707"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,156 +76,156 @@
         android:id="@+id/edaddress"
         android:layout_width="257dp"
         android:layout_height="44dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="400dp"
+        android:textColor="#070707"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.576" />
+        app:layout_constraintVertical_bias="0.576"
+        tools:ignore="UnknownId" />
 
     <TextView
         android:id="@+id/edemail"
         android:layout_width="251dp"
         android:layout_height="43dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="260dp"
+        android:textColor="#070707"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintHorizontal_bias="0.281"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/edname"
         android:layout_width="256dp"
         android:layout_height="48dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginBottom="348dp"
+        android:textColor="#070707"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.303"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="144dp"
+        android:layout_width="187dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="152dp"
+        android:background="#28CD30"
         android:text="@string/reset_password"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_width="202dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="88dp"
+        android:background="#28CD30"
         android:text="@string/delete_user_account"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
         android:layout_marginTop="260dp"
         android:alpha="0.5"
+        android:background="#0E0E0E"
+        android:contentDescription="@string/todo"
+        android:tint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/edusername"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toEndOf="@+id/edusername"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_create_24"
-        tools:ignore="VectorDrawableCompat"
-        android:contentDescription="@string/todo" />
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="35dp"
+        android:layout_height="33dp"
         android:layout_marginTop="316dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:alpha="0.5"
+        android:background="#0E0E0E"
+        android:contentDescription="@string/todo"
+        android:tint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/edname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toEndOf="@+id/edname"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.651"
         app:srcCompat="@drawable/ic_baseline_create_24"
-        tools:ignore="VectorDrawableCompat"
-        android:contentDescription="@string/todo" />
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="376dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
+        android:layout_marginBottom="12dp"
         android:alpha="0.5"
+        android:background="#0E0E0E"
+        android:contentDescription="@string/todo"
+        android:tint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/edemail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toEndOf="@+id/edemail"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_create_24"
-        tools:ignore="VectorDrawableCompat"
-        android:contentDescription="@string/todo" />
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_width="32dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="408dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:alpha="0.5"
+        android:background="#0E0E0E"
+        android:contentDescription="@string/todo"
+        android:tint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toEndOf="@+id/edaddress"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_create_24"
-        tools:ignore="VectorDrawableCompat"
-        android:contentDescription="@string/todo" />
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="37dp"
+        android:layout_height="28dp"
         android:layout_marginTop="500dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:alpha="0.5"
+        android:background="#0E0E0E"
+        android:contentDescription="@string/todo"
+        android:tint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/edphone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/edphone"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.777"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_create_24"
-        tools:ignore="VectorDrawableCompat"
-        android:contentDescription="@string/todo" />
+        tools:ignore="VectorDrawableCompat" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

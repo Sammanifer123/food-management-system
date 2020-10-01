@@ -71,16 +71,15 @@ public class MainActivity2 extends AppCompatActivity {
                     else if (TextUtils.isEmpty(username.getText().toString())) {
                         Toast.makeText(getApplicationContext(), "Please Enter the Username", Toast.LENGTH_SHORT).show();
                     }else if (!(username.length()>8)){
-                            Toast.makeText(getApplicationContext(), "at lest 8 characters", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Username wants at lest 8 characters", Toast.LENGTH_SHORT).show();
                     } else if (TextUtils.isEmpty(password.getText().toString())) {
                         Toast.makeText(getApplicationContext(), "Please Enter the Password", Toast.LENGTH_SHORT).show();
                     }else if ((password.length()<8)){
-                        Toast.makeText(getApplicationContext(), "At least 8 characters", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Password wants At least 8 characters", Toast.LENGTH_SHORT).show();
                     }
 
 
                     else {
-
                         member.setName(name.getText().toString().trim());
                         member.setEmail(email.getText().toString().trim());
                         member.setAddress(address.getText().toString().trim());

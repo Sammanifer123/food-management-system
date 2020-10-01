@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
@@ -26,7 +27,8 @@ public class Reset_Password extends AppCompatActivity {
 
     EditText currentpass, newpass, conpass;
     DatabaseReference reff;
-    Button save,back;
+    Button save;
+    ImageView back;
 
     private String currentPassword = null;
 
@@ -41,9 +43,19 @@ public class Reset_Password extends AppCompatActivity {
 
         reff = FirebaseDatabase.getInstance().getReference("Member");
         save = (Button) findViewById(R.id.save);
-        back=(Button)findViewById(R.id.back);
+        back = (ImageView) findViewById(R.id.back);
 
-
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent go = getIntent();
+                String username = go.getStringExtra("username");
+                Intent goagain = new Intent(getApplicationContext(), Edit_CustomerProfile.class);
+                goagain.putExtra("username", username);
+                startActivity(goagain);
+                finish();
+            }
+        });
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

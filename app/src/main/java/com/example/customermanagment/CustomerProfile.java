@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,8 +23,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class CustomerProfile extends AppCompatActivity {
 
-    TextView cusun,cname,cemail,cusadd,usph;
-    Button edit,back;
+    TextView cusun, cname, cemail, cusadd, usph;
+    Button edit;
+    ImageView back;
     DatabaseReference reff;
 
 
@@ -32,13 +34,13 @@ public class CustomerProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_profile);
 
-        cusun=(TextView)findViewById(R.id.uname) ;
-        cname=(TextView)findViewById(R.id.cusname);
+        cusun = (TextView) findViewById(R.id.uname);
+        cname = (TextView) findViewById(R.id.cusname);
         cemail=(TextView)findViewById(R.id.cusemail);
         cusadd=(TextView)findViewById(R.id.usaddress);
         usph=(TextView)findViewById(R.id.cusphone);
-        edit=(Button)findViewById(R.id.editprofile);
-        back=(Button)findViewById(R.id.back);
+        edit = (Button) findViewById(R.id.editprofile);
+        back = (ImageView) findViewById(R.id.back);
 
         Intent li=getIntent();
         final String username= li.getStringExtra("username");
